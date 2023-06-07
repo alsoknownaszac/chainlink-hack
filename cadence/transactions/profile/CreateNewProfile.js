@@ -1,4 +1,4 @@
-import ProfileContract from "../../contracts/ProfileContract.cdc"
+export const profile = `import ProfileContract from 0xProfile
 
 transaction {
     prepare(signer: AuthAccount) {
@@ -9,3 +9,4 @@ transaction {
         signer.link<&{ProfileContract.Public}>(publicPath, target: /storage/profile)
     }
 }
+`;

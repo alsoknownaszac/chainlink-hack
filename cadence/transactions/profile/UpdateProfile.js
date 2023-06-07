@@ -1,4 +1,4 @@
-import ProfileContract from "../../contracts/ProfileContract.cdc"
+export const updateProfileFun = `import ProfileContract from "../../contracts/ProfileContract.cdc"
 
 transaction(username: String, gender: String, name: String, src: String, info: String) {
     prepare(acct: AuthAccount) {
@@ -12,3 +12,4 @@ transaction(username: String, gender: String, name: String, src: String, info: S
         profile.setInfo(info: info)
     }
 }
+`;
